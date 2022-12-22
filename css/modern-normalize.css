@@ -15,6 +15,22 @@ Use a better box model (opinionated).
   box-sizing: border-box;
 }
 
+/* resetowanie stylów */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p,
+figure {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
 /**
 1. Correct the line height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -32,7 +48,10 @@ html {
 Sections
 ========
 */
-
+img {
+  vertical-align: middle;
+  display: block;
+}
 /**
 1. Remove the margin in all browsers.
 2. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
