@@ -360,32 +360,44 @@
           <ul class="flex">
             <li class="list-item">
               <a class="client-logo" href="#">
-                <svg width="106" height="60" class="icon"><use href="images/icons.svg#icon-Client1"></use></svg>
+                <svg width="106" height="60" class="icon">
+                  <use href="images/icons.svg#icon-Client1"></use>
+                </svg>
               </a>
             </li>
             <li class="list-item">
               <a class="client-logo" href="#">
-                 <svg width="106" height="60" class="icon"><use href="images/icons.svg#icon-Client2"></use></svg>
+                <svg width="106" height="60" class="icon">
+                  <use href="images/icons.svg#icon-Client2"></use>
+                </svg>
               </a>
             </li>
             <li class="list-item">
               <a class="client-logo" href="#">
-                 <svg width="106" height="60" class="icon"><use href="images/icons.svg#icon-Client3"></use></svg>
+                <svg width="106" height="60" class="icon">
+                  <use href="images/icons.svg#icon-Client3"></use>
+                </svg>
               </a>
             </li>
             <li class="list-item">
               <a class="client-logo" href="#">
-                 <svg width="106" height="60" class="icon"><use href="images/icons.svg#icon-Client4"></use></svg>
+                <svg width="106" height="60" class="icon">
+                  <use href="images/icons.svg#icon-Client4"></use>
+                </svg>
               </a>
             </li>
             <li class="list-item">
               <a class="client-logo" href="#">
-                 <svg width="106" height="60" class="icon"><use href="images/icons.svg#icon-Client5"></use></svg>
+                <svg width="106" height="60" class="icon">
+                  <use href="images/icons.svg#icon-Client5"></use>
+                </svg>
               </a>
             </li>
             <li class="list-item">
               <a class="client-logo" href="#">
-                 <svg width="106" height="60" class="icon"><use href="images/icons.svg#icon-client6"></use></svg>
+                <svg width="106" height="60" class="icon">
+                  <use href="images/icons.svg#icon-client6"></use>
+                </svg>
               </a>
             </li>
           </ul>
@@ -455,7 +467,7 @@
               placeholder="E-mail"
               class="newsletter__email-box"
             />
-            <button type="submit" class="button button--cta button--cta__newsletter">
+            <button type="submit" class="flex button button--cta button--newsletter">
               Zapisz się
               <svg width="24" height="24" class="icon icon--newsletter">
                 <use href="images/icons.svg#icon-send"></use>
@@ -470,57 +482,57 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-close" data-modal-close>
-          <svg width="11" height="11">
+        <button class="modal__close-button" data-modal-close>
+          <svg class="modal__close-icon" width="11" height="11">
             <use href="images/icons.svg#close-x"></use>
           </svg>
         </button>
-        <form class="cta-box">
-          <p>Zostaw swoje dane w formularzu poniżej</p>
-          <div class="form-label">
-            <label class="cta-box-label" for="name">
+        <form class="cta-form">
+          <p class="cta-form__text">Zostaw swoje dane w formularzu poniżej</p>
+          <div class="cta-form__label-box">
+            <label class="cta-form__label" for="name">
               Imie
-              <svg class="icon-form">
+              <svg class="cta-form__icon">
                 <use href="images/icons.svg#icon-name"></use>
               </svg>
             </label>
-            <input class="cta-box-input" name="name" type="text" id="name" />
+            <input class="cta-form__input" name="name" type="text" id="name" />
           </div>
-          <div class="form-label">
-            <label class="cta-box-label" for="phone">
+          <div class="cta-form__label-box">
+            <label class="cta-form__label" for="phone">
               Telefon
-              <svg class="icon-form">
+              <svg class="cta-form__icon">
                 <use href="images/icons.svg#icon-phone"></use>
               </svg>
             </label>
-            <input class="cta-box-input" name="phone" type="tel" id="phone" />
+            <input class="cta-form__input" name="phone" type="tel" id="phone" />
           </div>
-          <div class="form-label">
-            <label class="cta-box-label" for="email">
+          <div class="cta-form__label-box">
+            <label class="cta-form__label" for="email">
               Email
-              <svg class="icon-form">
+              <svg class="cta-form__icon">
                 <use href="images/icons.svg#icon-mail"></use>
               </svg>
             </label>
-            <input class="cta-box-input" name="email" type="email" id="email" />
+            <input class="cta-form__input" name="email" type="email" id="email" />
           </div>
-          <label class="cta-box-label" for="adnotations">Komentarz</label>
+          <label class="cta-form__label" for="adnotations">Komentarz</label>
           <textarea
-            class="cta-box-adnotations"
+            class="cta-form__adnotations"
             name="adnotations"
             type="text"
             id="adnotations"
             placeholder="Wprowadź tekst"
           ></textarea>
-          <label class="cta-agreement" for="checkbox">
-            <input class="cta-agreement-checkbox" type="checkbox" name="checkbox" id="checkbox" />
-            <span class="cta-checkbox">
-              <svg class="check-icon" width="16" height="15">
+          <label class="cta-form__agreement" for="checkbox">
+            <input class="cta-form__checkbox" type="checkbox" name="checkbox" id="checkbox" />
+            <span class="cta-form__check-border">
+              <svg class="cta-form__check-icon" width="16" height="15">
                 <use href="images/icons.svg#icon-tick"></use>
               </svg>
             </span>
-            Oświadczam iż akceptuję <a class="cta-agreement-link" href="#">Regulamin</a> i
-            <a class="cta-agreement-link" href="#">Politykę Prywatności</a>
+            Oświadczam iż akceptuję <a class="cta-form__agreement-link" href="#">Regulamin</a> i
+            <a class="cta-form__agreement-link" href="#">Politykę Prywatności</a>
           </label>
           <button class="button button--cta button--form" type="submit">Wyślij</button>
         </form>
