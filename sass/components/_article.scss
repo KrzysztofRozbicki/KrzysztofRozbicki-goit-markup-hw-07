@@ -1,0 +1,26 @@
+@use '../utils/variables' as *;
+@use '../components/mixins' as *;
+
+//klasy dla artykułów
+.article {
+  &__icon-box {
+    padding: 25px 100px;
+    background-color: $button-color;
+    border-radius: $standard-radius;
+    margin-bottom: 30px;
+  }
+
+  &__header {
+    color: font-color('secondary');
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.7;
+  }
+}
