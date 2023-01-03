@@ -1,0 +1,37 @@
+$font-color: (
+  'secondary': #212121,
+  'primary': #757575,
+  'primary-transparent': #75757580,
+  'contrast': #ffffff,
+  'address': #ffffff99,
+  'newsletter': #ffffff99,
+);
+
+@function font-color($key) {
+  @return map-get($font-color, $key);
+}
+
+$font-size: (
+  'small': 12px,
+  'standard': 14px,
+  'medium': 16px,
+  'medium-large': 18px,
+  'large': 20px,
+  'logo': 26px,
+  'section-header': 36px,
+  'main-header': 44px,
+);
+
+@function font-size($key) {
+  @return map-get($font-size, $key);
+}
+
+$letter-spacing: (
+  'small': 0.01em,
+  'standard': 0.03em,
+  'large': 0.06em,
+);
+
+@function spacing($key) {
+  @return map-get($letter-spacing, $key);
+}
