@@ -1,0 +1,47 @@
+@use '../utils/variables' as *;
+@use '../components/mixins' as *;
+
+/* Klasy buttons dla przycisków*/
+
+.button {
+  font-size: font-size('medium');
+  @include default-transition;
+  border: 0px;
+  cursor: pointer;
+  border-radius: $standard-radius;
+
+  &--project {
+    display: inline-block;
+    background-color: $button-color;
+    color: font-color('secondary');
+    line-height: 1.625;
+    padding: 6px 22px;
+    margin: 0px 4px 50px;
+    &:hover,
+    &:focus {
+      background-color: $active;
+      color: font-color('contrast');
+      box-shadow: 0px 4px 4px shadow('standard');
+    }
+  }
+
+  &--cta {
+    background-color: $active;
+    color: font-color('contrast');
+    line-height: 1.875;
+    font-weight: 700;
+    letter-spacing: spacing('large');
+    padding: 10px 41px;
+  }
+
+  &--newsletter {
+    margin-left: 12px;
+    padding: 10px 28px 10px 42px;
+  }
+
+  &--form {
+    margin: 0 auto;
+    width: 200px;
+    box-shadow: 0px 4px 4px shadow('button');
+  }
+}

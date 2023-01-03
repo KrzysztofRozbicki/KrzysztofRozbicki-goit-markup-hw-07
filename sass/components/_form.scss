@@ -1,0 +1,129 @@
+@use '../utils/variables' as *;
+@use '../components/mixins' as *;
+
+.cta-form {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__text {
+    text-align: center;
+    font-size: font-size('large');
+    font-weight: 700;
+
+    color: font-color('secondary');
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    position: relative;
+    font-size: font-size('small');
+
+    letter-spacing: spacing('small');
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    background-color: transparent;
+    border: 1px solid $input-border;
+    border-radius: $standard-radius;
+    padding: 11px 12px 11px 42px;
+    margin-bottom: 10px;
+    @include default-transition;
+
+    &:focus-within {
+      outline: none;
+      border-color: $active;
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 40px;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+
+  &__label-box {
+    display: flex;
+    flex-direction: column;
+    fill: font-color('secondary');
+    @include default-transition;
+
+    &:focus-within {
+      fill: $active;
+    }
+  }
+
+  &__adnotations {
+    position: scroll;
+    padding: 12px 16px;
+    border: 1px solid $input-border;
+    border-radius: $standard-radius;
+    height: 120px;
+    margin-bottom: 20px;
+    font-size: font-size('small');
+
+    letter-spacing: spacing('small');
+    resize: none;
+    @include default-transition;
+    &::placeholder {
+      color: font-color('primary-transparent');
+    }
+    &:focus-within {
+      outline: none;
+      border-color: $active;
+    }
+  }
+
+  &__agreement {
+    position: relative;
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+    margin-left: 14px;
+    padding-left: 7px;
+  }
+
+  &__checkbox {
+    opacity: 0;
+  }
+
+  &__agreement-link {
+    text-decoration-line: underline;
+    color: $active;
+  }
+
+  &__check-border {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    border: 2px solid font-color('secondary');
+    border-radius: 2px;
+    margin-right: 8px;
+    @include default-transition;
+  }
+
+  &__checkbox:checked + &__check-border {
+    background-color: $active;
+    outline: none;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__checkbox:checked + &__check-border > &__check-icon {
+    visibility: visible;
+  }
+
+  &__check-icon {
+    visibility: hidden;
+    display: block;
+    fill: font-color('contrast');
+  }
+}
