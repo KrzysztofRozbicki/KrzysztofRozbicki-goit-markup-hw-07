@@ -1,9 +1,9 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 /* OKNO MODUŁOWE */
 
-.is-hidden {
+.isHidden {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
@@ -16,7 +16,7 @@
   width: 100vw;
   height: 100vw;
   background-color: $background-overlay;
-  @include modal-transition;
+  @extend .modalTransition;
 }
 
 .modal {
@@ -25,16 +25,16 @@
   top: 50%;
   left: 50%;
   opacity: 1;
-  @include modal-transition;
+  @extend .modalTransition;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
   background-color: font-color('contrast');
   border-radius: $standard-radius;
-  @include box-shadow;
+  @extend .boxShadow;
 
-  &__close-button {
+  &__closeButton {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -47,7 +47,7 @@
     cursor: pointer;
   }
 
-  &__close-icon {
+  &__closeIcon {
     display: block;
   }
 }

@@ -1,9 +1,9 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 //klasy dla artykułów
 .article {
-  &__icon-box {
+  &__iconBox {
     padding: 25px 100px;
     background-color: $button-color;
     border-radius: $standard-radius;

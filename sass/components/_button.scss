@@ -1,11 +1,11 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 /* Klasy buttons dla przycisków*/
 
 .button {
   font-size: font-size('medium');
-  @include default-transition;
+  @extend .defaultTransition;
   border: 0px;
   cursor: pointer;
   border-radius: $standard-radius;

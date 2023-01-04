@@ -1,7 +1,7 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
-.cta-form {
+.ctaForm {
   padding: 40px;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@
     border-radius: $standard-radius;
     padding: 11px 12px 11px 42px;
     margin-bottom: 10px;
-    @include default-transition;
+    @extend .defaultTransition;
 
     &:focus-within {
       outline: none;
@@ -47,11 +47,11 @@
     transform: translateY(-50%);
   }
 
-  &__label-box {
+  &__labelBox {
     display: flex;
     flex-direction: column;
     fill: font-color('secondary');
-    @include default-transition;
+    @extend .defaultTransition;
 
     &:focus-within {
       fill: $active;
@@ -69,7 +69,7 @@
 
     letter-spacing: spacing('small');
     resize: none;
-    @include default-transition;
+    @extend .defaultTransition;
     &::placeholder {
       color: font-color('primary-transparent');
     }
@@ -92,12 +92,12 @@
     opacity: 0;
   }
 
-  &__agreement-link {
+  &__agreementLink {
     text-decoration-line: underline;
     color: $active;
   }
 
-  &__check-border {
+  &__checkBorder {
     position: absolute;
     top: 4px;
     left: 0;
@@ -106,10 +106,10 @@
     border: 2px solid font-color('secondary');
     border-radius: 2px;
     margin-right: 8px;
-    @include default-transition;
+    @extend .defaultTransition;
   }
 
-  &__checkbox:checked + &__check-border {
+  &__checkbox:checked + &__checkBorder {
     background-color: $active;
     outline: none;
     border: none;
@@ -117,11 +117,11 @@
     background-position: center center;
   }
 
-  &__checkbox:checked + &__check-border > &__check-icon {
+  &__checkbox:checked + &__checkBorder > &__checkIcon {
     visibility: visible;
   }
 
-  &__check-icon {
+  &__checkIcon {
     visibility: hidden;
     display: block;
     fill: font-color('contrast');

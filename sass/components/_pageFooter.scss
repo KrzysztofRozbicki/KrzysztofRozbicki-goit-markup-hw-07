@@ -1,0 +1,25 @@
+@use '../utils/variables' as *;
+
+.bottom {
+  padding: 60px 0px;
+
+  color: font-color('contrast');
+  background-color: $background-dark;
+  line-height: 1.7;
+  &__header {
+    font-weight: 700;
+
+    text-transform: uppercase;
+    margin-top: 22px;
+    margin-bottom: 0px;
+  }
+  &__socialBox {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  &__address {
+    margin-top: 20px;
+    font-style: normal;
+  }
+}

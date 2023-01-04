@@ -1,12 +1,13 @@
+@forward '../components/extends';
 @forward '../components/logo';
-@forward '../components/mixins';
 @forward '../components/menu';
 @forward '../components/section';
-@forward '../components/project-box';
+@forward '../components/projectBox';
 @forward '../components/button';
-@forward '../components/page-footer';
+@forward '../components/pageFooter';
 @forward '../components/modal';
 @forward '../components/form';
 @forward '../components/article';
-@forward '../components/team-member';
-@forward '../components/social-media';
+@forward '../components/teamMember';
+@forward '../components/socialMedia';
+

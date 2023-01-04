@@ -1,6 +1,8 @@
 /* Klasy dla menu */
+
+
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 .menu {
   padding: 24px 0px 25px 0px;
@@ -9,13 +11,13 @@
 
   &__hyperlink {
     color: font-color('secondary');
-    @include default-transition;
+    @extend .defaultTransition;
     &:hover,
     &:focus {
       color: $active;
     }
 
-    &--is-active {
+    &--isActive {
       color: $active;
       position: relative;
 

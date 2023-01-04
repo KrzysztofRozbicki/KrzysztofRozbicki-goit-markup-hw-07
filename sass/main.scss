@@ -1,6 +1,9 @@
 @use 'utils/variables' as *;
 @use '../sass/components' as *;
 
+// ZAMIENIĆ MIXIN NA @EXTEND!!! ZMIANA ZE SNAKE CASE (nazwa-klasy) na camelCase
+// ZASTANOWIĆ SIĘ NAD UŻYWANIEM SOURCEMAP
+
 .webstudio {
   font-family: 'Roboto', 'Raleway', sans-serif;
   color: font-color('primary');
@@ -33,13 +36,13 @@
   }
 }
 
-.client-logo {
+.clientLogo {
   border-radius: $standard-radius;
   outline: 1px solid $icon-color;
   padding: 16px 32px;
   display: inline-block;
   color: $icon-color;
-  @include default-transition;
+  @extend .defaultTransition;
   &:hover,
   &:focus {
     color: $active;
@@ -65,7 +68,7 @@
 
 /* Klasa dla list */
 
-.list-item {
+.listItem {
   list-style: none;
 
   &--margin {
@@ -77,37 +80,12 @@
   }
 }
 
-/* Klasy dla article*/
-
-.article {
-  &__icon-box {
-    padding: 25px 100px;
-    background-color: $button-color;
-    border-radius: $standard-radius;
-    margin-bottom: 30px;
-  }
-
-  &__header {
-    color: font-color('secondary');
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-
-  &__text {
-    font-weight: 400;
-    text-align: justify;
-    line-height: 1.7;
-  }
-}
-
 /* klasy dla boxów z członkami zespołu */
-.team-member {
+.teamMember {
   background-color: font-color('contrast');
   width: 270px;
   font-size: font-size('medium');
-  @include box-shadow;
+  @extend .boxShadow;
   border-radius: 0px 0px 4px 4px;
 
   &__description {
@@ -127,11 +105,11 @@
 }
 
 //klasa dla stylizowania icon social-media
-.social-media {
+.socialMedia {
   display: block;
   padding: 12px;
   border-radius: 50%;
-  @include default-transition;
+  @extend .defaultTransition;
 
   &--footer {
     color: font-color('contrast');
@@ -153,14 +131,14 @@
 }
 
 /* Klasa project dla siatki w których są przykłady portfolio */
-.box-grid {
+.boxGrid {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
 
 // Klasa dla tekstu nachodzacego na zdjęcia
-.overlay-text {
+.overlayText {
   transform: translateY(-70px);
   background-color: $text-box-background;
   font-weight: 700;
@@ -171,7 +149,7 @@
 
 // Klasa dla stylizywania kontaktów
 .contact {
-  @include default-transition;
+  @extend .defaultTransition;
   &:hover,
   &:focus {
     color: $active;
@@ -190,7 +168,7 @@
   display: flex;
   padding-top: 20px;
 
-  &__email-box {
+  &__emailBox {
     padding: 15px 16px;
     width: 358px;
     border: 1px solid $border-newsletter;
@@ -203,4 +181,3 @@
     box-shadow: 0px 4px 4px shadow('newsletter');
   }
 }
-
