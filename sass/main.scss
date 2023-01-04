@@ -1,5 +1,17 @@
-@use 'utils/variables' as *;
-@use '../sass/components' as *;
+@import '../sass/utils/variables';
+@import '../sass/sourcemaps';
+@import '../sass/components/logo';
+@import '../sass/components/mixins';
+@import '../sass/components/menu';
+@import '../sass/components/section';
+@import '../sass/components/project-box';
+@import '../sass/components/button';
+@import '../sass/components/page-footer';
+@import '../sass/components/modal';
+@import '../sass/components/form';
+@import '../sass/components/article';
+@import '../sass/components/team-member';
+@import '../sass/components/social-media';
 
 .webstudio {
   font-family: 'Roboto', 'Raleway', sans-serif;
@@ -33,7 +45,7 @@
   }
 }
 
-.client-logo {
+.customer-logo {
   border-radius: $standard-radius;
   outline: 1px solid $icon-color;
   padding: 16px 32px;
@@ -74,81 +86,6 @@
 
   &--button {
     display: inline-block;
-  }
-}
-
-/* Klasy dla article*/
-
-.article {
-  &__icon-box {
-    padding: 25px 100px;
-    background-color: $button-color;
-    border-radius: $standard-radius;
-    margin-bottom: 30px;
-  }
-
-  &__header {
-    color: font-color('secondary');
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: 10px;
-  }
-
-  &__text {
-    font-weight: 400;
-    text-align: justify;
-    line-height: 1.7;
-  }
-}
-
-/* klasy dla boxów z członkami zespołu */
-.team-member {
-  background-color: font-color('contrast');
-  width: 270px;
-  font-size: font-size('medium');
-  @include box-shadow;
-  border-radius: 0px 0px 4px 4px;
-
-  &__description {
-    padding: 30px 32px;
-    text-align: center;
-  }
-
-  &__name {
-    color: font-color('secondary');
-  }
-
-  &__position {
-    font-weight: 400;
-    margin-top: 10px;
-    margin-bottom: 16px;
-  }
-}
-
-//klasa dla stylizowania icon social-media
-.social-media {
-  display: block;
-  padding: 12px;
-  border-radius: 50%;
-  @include default-transition;
-
-  &--footer {
-    color: font-color('contrast');
-    background-color: $icon-background;
-    &:hover,
-    &:focus {
-      background-color: $active;
-    }
-  }
-
-  &--team {
-    color: $icon-color;
-    &:hover,
-    &:focus {
-      background-color: $active;
-      color: font-color('contrast');
-    }
   }
 }
 
@@ -203,4 +140,3 @@
     box-shadow: 0px 4px 4px shadow('newsletter');
   }
 }
-
