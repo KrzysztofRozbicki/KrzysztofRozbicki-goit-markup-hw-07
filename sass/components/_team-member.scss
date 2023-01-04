@@ -1,3 +1,6 @@
+@use '../utils/variables' as *;
+@use '../components/mixins' as *;
+
 /* klasy dla boxów z członkami zespołu */
 .team-member {
   background-color: font-color('contrast');

@@ -1,3 +1,6 @@
+@use '../utils/variables' as *;
+@use '../components/mixins' as *;
+
 //klasa dla stylizowania icon social-media
 .social-media {
   display: block;
