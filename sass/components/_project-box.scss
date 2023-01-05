@@ -1,28 +1,18 @@
-<<<<<<< HEAD:sass/components/_projectBox.scss
-<<<<<<< HEAD:sass/components/_projectBox.scss
-@use '../utils/variables' as *;
-@use '../components/extends' as *;
-
-.projectBox {
-=======
-=======
 @use '../utils/variables' as *;
 @use '../components/mixins' as *;
 
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora):sass/components/_project-box.scss
 .project-box {
->>>>>>> parent of 61d5dda (revert changes):sass/components/_project-box.scss
   position: relative;
   width: 370px;
-  @extend .defaultTransition;
+  @include default-transition;
 
   &:hover,
   &:focus {
-    @extend .portfolioShadow;
+    @include portfolio-shadow;
     cursor: pointer;
   }
 
-  &__textBox {
+  &__text-box {
     position: relative;
     overflow: hidden;
     height: 294px;
@@ -40,7 +30,7 @@
     text-align: left;
     padding: 49px 45px 49px 24px;
     background-color: $active-transparent;
-    @extend .defaultTransition;
+    @include default-transition;
     &-box:hover &,
     &-box:focus & {
       transform: translateY(-294px);

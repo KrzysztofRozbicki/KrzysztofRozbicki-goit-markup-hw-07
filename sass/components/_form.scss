@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-@use '../utils/variables' as *;
-@use '../components/extends' as *;
-
-.ctaForm {
-=======
-=======
 @use '../utils/variables' as *;
 @use '../components/mixins' as *;
 
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora)
 .cta-form {
->>>>>>> parent of 61d5dda (revert changes)
   padding: 40px;
   display: flex;
   justify-content: space-between;
@@ -40,7 +30,7 @@
     border-radius: $standard-radius;
     padding: 11px 12px 11px 42px;
     margin-bottom: 10px;
-    @extend .defaultTransition;
+    @include default-transition;
 
     &:focus-within {
       outline: none;
@@ -57,11 +47,11 @@
     transform: translateY(-50%);
   }
 
-  &__labelBox {
+  &__label-box {
     display: flex;
     flex-direction: column;
     fill: font-color('secondary');
-    @extend .defaultTransition;
+    @include default-transition;
 
     &:focus-within {
       fill: $active;
@@ -79,7 +69,7 @@
 
     letter-spacing: spacing('small');
     resize: none;
-    @extend .defaultTransition;
+    @include default-transition;
     &::placeholder {
       color: font-color('primary-transparent');
     }
@@ -102,12 +92,12 @@
     opacity: 0;
   }
 
-  &__agreementLink {
+  &__agreement-link {
     text-decoration-line: underline;
     color: $active;
   }
 
-  &__checkBorder {
+  &__check-border {
     position: absolute;
     top: 4px;
     left: 0;
@@ -116,10 +106,10 @@
     border: 2px solid font-color('secondary');
     border-radius: 2px;
     margin-right: 8px;
-    @extend .defaultTransition;
+    @include default-transition;
   }
 
-  &__checkbox:checked + &__checkBorder {
+  &__checkbox:checked + &__check-border {
     background-color: $active;
     outline: none;
     border: none;
@@ -127,11 +117,11 @@
     background-position: center center;
   }
 
-  &__checkbox:checked + &__checkBorder > &__checkIcon {
+  &__checkbox:checked + &__check-border > &__check-icon {
     visibility: visible;
   }
 
-  &__checkIcon {
+  &__check-icon {
     visibility: hidden;
     display: block;
     fill: font-color('contrast');

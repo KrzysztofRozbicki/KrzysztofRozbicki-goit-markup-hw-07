@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-@use '../utils/variables' as *;
-@use '../components/extends' as *;
-
-=======
->>>>>>> parent of 61d5dda (revert changes)
-=======
 @use '../utils/variables' as *;
 @use '../components/mixins' as *;
 
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora)
 /* OKNO MODUŁOWE */
 
-.isHidden {
+.is-hidden {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
@@ -25,7 +16,7 @@
   width: 100vw;
   height: 100vw;
   background-color: $background-overlay;
-  @extend .modalTransition;
+  @include modal-transition;
 }
 
 .modal {
@@ -34,16 +25,16 @@
   top: 50%;
   left: 50%;
   opacity: 1;
-  @extend .modalTransition;
+  @include modal-transition;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
   background-color: font-color('contrast');
   border-radius: $standard-radius;
-  @extend .boxShadow;
+  @include box-shadow;
 
-  &__closeButton {
+  &__close-button {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -56,7 +47,7 @@
     cursor: pointer;
   }
 
-  &__closeIcon {
+  &__close-icon {
     display: block;
   }
 }

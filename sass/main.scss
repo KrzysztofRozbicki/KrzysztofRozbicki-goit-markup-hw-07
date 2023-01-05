@@ -1,9 +1,6 @@
 @use 'utils/variables' as *;
 @use '../sass/components' as *;
 
-// ZAMIENIĆ MIXIN NA @EXTEND!!! ZMIANA ZE SNAKE CASE (nazwa-klasy) na camelCase
-// ZASTANOWIĆ SIĘ NAD UŻYWANIEM SOURCEMAP
-
 .webstudio {
   font-family: 'Roboto', 'Raleway', sans-serif;
   color: font-color('primary');
@@ -36,21 +33,13 @@
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.clientLogo {
-=======
-.customer-logo {
->>>>>>> parent of 61d5dda (revert changes)
-=======
 .client-logo {
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora)
   border-radius: $standard-radius;
   outline: 1px solid $icon-color;
   padding: 16px 32px;
   display: inline-block;
   color: $icon-color;
-  @extend .defaultTransition;
+  @include default-transition;
   &:hover,
   &:focus {
     color: $active;
@@ -76,7 +65,7 @@
 
 /* Klasa dla list */
 
-.listItem {
+.list-item {
   list-style: none;
 
   &--margin {
@@ -88,15 +77,6 @@
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* klasy dla boxów z członkami zespołu */
-.teamMember {
-  background-color: font-color('contrast');
-  width: 270px;
-  font-size: font-size('medium');
-  @extend .boxShadow;
-=======
 /* Klasy dla article*/
 
 .article {
@@ -128,7 +108,6 @@
   width: 270px;
   font-size: font-size('medium');
   @include box-shadow;
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora)
   border-radius: 0px 0px 4px 4px;
 
   &__description {
@@ -148,19 +127,11 @@
 }
 
 //klasa dla stylizowania icon social-media
-<<<<<<< HEAD
-.socialMedia {
-  display: block;
-  padding: 12px;
-  border-radius: 50%;
-  @extend .defaultTransition;
-=======
 .social-media {
   display: block;
   padding: 12px;
   border-radius: 50%;
   @include default-transition;
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora)
 
   &--footer {
     color: font-color('contrast');
@@ -181,20 +152,15 @@
   }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> parent of 61d5dda (revert changes)
-=======
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora)
 /* Klasa project dla siatki w których są przykłady portfolio */
-.boxGrid {
+.box-grid {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
 
 // Klasa dla tekstu nachodzacego na zdjęcia
-.overlayText {
+.overlay-text {
   transform: translateY(-70px);
   background-color: $text-box-background;
   font-weight: 700;
@@ -205,7 +171,7 @@
 
 // Klasa dla stylizywania kontaktów
 .contact {
-  @extend .defaultTransition;
+  @include default-transition;
   &:hover,
   &:focus {
     color: $active;
@@ -224,7 +190,7 @@
   display: flex;
   padding-top: 20px;
 
-  &__emailBox {
+  &__email-box {
     padding: 15px 16px;
     width: 358px;
     border: 1px solid $border-newsletter;

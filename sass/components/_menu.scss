@@ -1,16 +1,6 @@
 /* Klasy dla menu */
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-@use '../utils/variables' as *;
-@use '../components/extends' as *;
-=======
->>>>>>> parent of 61d5dda (revert changes)
-=======
 @use '../utils/variables' as *;
 @use '../components/mixins' as *;
->>>>>>> parent of b8db29b (Zmiany wg uwag mentora)
 
 .menu {
   padding: 24px 0px 25px 0px;
@@ -19,13 +9,13 @@
 
   &__hyperlink {
     color: font-color('secondary');
-    @extend .defaultTransition;
+    @include default-transition;
     &:hover,
     &:focus {
       color: $active;
     }
 
-    &--isActive {
+    &--is-active {
       color: $active;
       position: relative;
 
