@@ -1,9 +1,15 @@
 <<<<<<< HEAD:sass/components/_socialMedia.scss
+<<<<<<< HEAD:sass/components/_socialMedia.scss
 @use '../utils/variables' as *;
 @import '../components/extends';
 
 =======
 >>>>>>> parent of 61d5dda (revert changes):sass/components/_social-media.scss
+=======
+@use '../utils/variables' as *;
+@use '../components/mixins' as *;
+
+>>>>>>> parent of b8db29b (Zmiany wg uwag mentora):sass/components/_social-media.scss
 //klasa dla stylizowania icon social-media
 .socialMedia {
   display: block;

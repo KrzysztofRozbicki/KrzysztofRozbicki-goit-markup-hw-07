@@ -1,8 +1,13 @@
 <<<<<<< HEAD:sass/components/_extends.scss
+<<<<<<< HEAD:sass/components/_extends.scss
 @use '../utils/variables' as *;
 
 .modalTransition {
 =======
+=======
+@use '../utils/variables' as *;
+
+>>>>>>> parent of b8db29b (Zmiany wg uwag mentora):sass/components/_mixins.scss
 @mixin modal-transition {
 >>>>>>> parent of 61d5dda (revert changes):sass/components/_mixins.scss
   transition-property: opacity, transform;
