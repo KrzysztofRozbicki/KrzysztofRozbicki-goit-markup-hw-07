@@ -1,7 +1,11 @@
+<<<<<<< HEAD:sass/components/_projectBox.scss
 @use '../utils/variables' as *;
 @use '../components/extends' as *;
 
 .projectBox {
+=======
+.project-box {
+>>>>>>> parent of 61d5dda (revert changes):sass/components/_project-box.scss
   position: relative;
   width: 370px;
   @extend .defaultTransition;

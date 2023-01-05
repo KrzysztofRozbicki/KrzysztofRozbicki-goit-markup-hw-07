@@ -1,5 +1,17 @@
-@use 'utils/variables' as *;
-@use '../sass/components' as *;
+@import '../sass/utils/variables';
+@import '../sass/sourcemaps';
+@import '../sass/components/logo';
+@import '../sass/components/mixins';
+@import '../sass/components/menu';
+@import '../sass/components/section';
+@import '../sass/components/project-box';
+@import '../sass/components/button';
+@import '../sass/components/page-footer';
+@import '../sass/components/modal';
+@import '../sass/components/form';
+@import '../sass/components/article';
+@import '../sass/components/team-member';
+@import '../sass/components/social-media';
 
 // ZAMIENIĆ MIXIN NA @EXTEND!!! ZMIANA ZE SNAKE CASE (nazwa-klasy) na camelCase
 // ZASTANOWIĆ SIĘ NAD UŻYWANIEM SOURCEMAP
@@ -36,7 +48,11 @@
   }
 }
 
+<<<<<<< HEAD
 .clientLogo {
+=======
+.customer-logo {
+>>>>>>> parent of 61d5dda (revert changes)
   border-radius: $standard-radius;
   outline: 1px solid $icon-color;
   padding: 16px 32px;
@@ -80,6 +96,7 @@
   }
 }
 
+<<<<<<< HEAD
 /* klasy dla boxów z członkami zespołu */
 .teamMember {
   background-color: font-color('contrast');
@@ -130,6 +147,8 @@
   }
 }
 
+=======
+>>>>>>> parent of 61d5dda (revert changes)
 /* Klasa project dla siatki w których są przykłady portfolio */
 .boxGrid {
   display: flex;

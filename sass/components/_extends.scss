@@ -1,6 +1,10 @@
+<<<<<<< HEAD:sass/components/_extends.scss
 @use '../utils/variables' as *;
 
 .modalTransition {
+=======
+@mixin modal-transition {
+>>>>>>> parent of 61d5dda (revert changes):sass/components/_mixins.scss
   transition-property: opacity, transform;
   transition-timing-function: ease-in-out;
   transition-duration: 500ms;
