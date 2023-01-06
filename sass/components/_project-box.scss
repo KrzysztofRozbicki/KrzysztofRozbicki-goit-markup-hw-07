@@ -1,14 +1,14 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 .project-box {
   position: relative;
   width: 370px;
-  @include default-transition;
+  @extend .default-transition;
 
   &:hover,
   &:focus {
-    @include portfolio-shadow;
+    @extend .portfolio-shadow;
     cursor: pointer;
   }
 
@@ -28,9 +28,9 @@
 
     color: font-color('contrast');
     text-align: left;
-    padding: 49px 45px 49px 24px;
+    padding: 3rem 2.75rem 3rem 1.5rem;
     background-color: $active-transparent;
-    @include default-transition;
+    @extend .default-transition;
     &-box:hover &,
     &-box:focus & {
       transform: translateY(-294px);
@@ -39,7 +39,7 @@
 
   &__caption {
     position: relative;
-    padding: 20px 24px;
+    padding: 1.25rem 1.5rem;
     border: 1px solid $border-color;
     border-top: none;
     text-align: left;
@@ -49,7 +49,7 @@
     font-size: font-size('medium-large');
     font-weight: 700;
     line-height: 2;
-    letter-spacing: spacing('large');
+    letter-spacing: 0.06em;
     text-align: left;
     color: font-color('secondary');
   }

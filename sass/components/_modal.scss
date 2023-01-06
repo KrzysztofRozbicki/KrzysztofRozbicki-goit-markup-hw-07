@@ -1,5 +1,5 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 /* OKNO MODUŁOWE */
 
@@ -16,7 +16,7 @@
   width: 100vw;
   height: 100vw;
   background-color: $background-overlay;
-  @include modal-transition;
+  @extend .modal-transition;
 }
 
 .modal {
@@ -25,21 +25,21 @@
   top: 50%;
   left: 50%;
   opacity: 1;
-  @include modal-transition;
+  @extend .modal-transition;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
   background-color: font-color('contrast');
-  border-radius: $standard-radius;
-  @include box-shadow;
+  border-radius: 0.25rem;
+  @extend .box-shadow;
 
   &__close-button {
     position: absolute;
     top: 8px;
     right: 8px;
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     padding: 9px;
     border: 1px solid $close-circle;
     background-color: font-color('contrast');

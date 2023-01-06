@@ -1,12 +1,12 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 //klasa dla stylizowania icon social-media
 .social-media {
   display: block;
-  padding: 12px;
+  padding: 0.75rem;
   border-radius: 50%;
-  @include default-transition;
+  @extend .default-transition;
 
   &--footer {
     color: font-color('contrast');

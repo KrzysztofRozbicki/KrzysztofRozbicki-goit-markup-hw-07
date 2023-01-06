@@ -1,13 +1,12 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
 
 //klasy dla artykułów
 .article {
   &__icon-box {
     padding: 25px 100px;
     background-color: $button-color;
-    border-radius: $standard-radius;
-    margin-bottom: 30px;
+    border-radius: 0.25rem;
+    margin-bottom: 1.875rem;
   }
 
   &__header {
@@ -15,7 +14,7 @@
     text-transform: uppercase;
     font-weight: 700;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
 
   &__text {

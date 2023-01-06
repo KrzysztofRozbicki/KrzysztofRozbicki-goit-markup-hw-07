@@ -1,15 +1,15 @@
 /* Klasy dla menu */
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 .menu {
-  padding: 24px 0px 25px 0px;
+  padding: 1.5rem 0px 25px 0px;
   background-color: font-color('contrast');
   border-bottom: 1px solid $stroke-color;
 
   &__hyperlink {
     color: font-color('secondary');
-    @include default-transition;
+    @extend .default-transition;
     &:hover,
     &:focus {
       color: $active;
@@ -25,7 +25,7 @@
         transform: translateY(45px);
         left: 0px;
         width: 53px;
-        height: 4px;
+        height: 0.25rem;
         background-color: $active;
         border-radius: 2px;
       }
@@ -37,7 +37,7 @@
   }
 
   &__right {
-    gap: 50px;
+    gap: 3.125rem;
   }
 
   &__links {

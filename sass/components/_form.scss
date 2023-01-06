@@ -1,8 +1,8 @@
 @use '../utils/variables' as *;
-@use '../components/mixins' as *;
+@use '../components/extends' as *;
 
 .cta-form {
-  padding: 40px;
+  padding: 2.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -13,24 +13,24 @@
     font-weight: 700;
 
     color: font-color('secondary');
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
   }
 
   &__label {
     position: relative;
     font-size: font-size('small');
 
-    letter-spacing: spacing('small');
-    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.25rem;
   }
 
   &__input {
     background-color: transparent;
     border: 1px solid $input-border;
-    border-radius: $standard-radius;
-    padding: 11px 12px 11px 42px;
-    margin-bottom: 10px;
-    @include default-transition;
+    border-radius: 0.25rem;
+    padding: 0.75rem 0.75rem 0.75rem 2.625rem;
+    margin-bottom: 0.625rem;
+    @extend .default-transition;
 
     &:focus-within {
       outline: none;
@@ -39,11 +39,11 @@
   }
 
   &__icon {
-    width: 18px;
-    height: 18px;
+    width: 1.125rem;
+    height: 1.125rem;
     position: absolute;
-    top: 40px;
-    left: 16px;
+    top: 2.5rem;
+    left: 1rem;
     transform: translateY(-50%);
   }
 
@@ -51,7 +51,7 @@
     display: flex;
     flex-direction: column;
     fill: font-color('secondary');
-    @include default-transition;
+    @extend .default-transition;
 
     &:focus-within {
       fill: $active;
@@ -60,16 +60,16 @@
 
   &__adnotations {
     position: scroll;
-    padding: 12px 16px;
+    padding: 0.75rem 1rem;
     border: 1px solid $input-border;
-    border-radius: $standard-radius;
-    height: 120px;
-    margin-bottom: 20px;
+    border-radius: 0.25rem;
+    height: 11.25rem;
+    margin-bottom: 1.25rem;
     font-size: font-size('small');
 
-    letter-spacing: spacing('small');
+    letter-spacing: 0.01em;
     resize: none;
-    @include default-transition;
+    @extend .default-transition;
     &::placeholder {
       color: font-color('primary-transparent');
     }
@@ -83,9 +83,9 @@
     position: relative;
     line-height: 1.7;
     font-weight: 400;
-    margin-bottom: 30px;
-    margin-left: 14px;
-    padding-left: 7px;
+    margin-bottom: 1.875rem;
+    margin-left: 1.25rem;
+    padding-left: 0.5rem;
   }
 
   &__checkbox {
@@ -99,14 +99,14 @@
 
   &__check-border {
     position: absolute;
-    top: 4px;
+    top: 0.25rem;
     left: 0;
-    width: 16px;
-    height: 15px;
+    width: 1rem;
+    height: 1rem;
     border: 2px solid font-color('secondary');
     border-radius: 2px;
-    margin-right: 8px;
-    @include default-transition;
+    margin-right: 0.5rem;
+    @extend .default-transition;
   }
 
   &__checkbox:checked + &__check-border {
