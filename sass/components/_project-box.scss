@@ -33,7 +33,7 @@
     @extend .default-transition;
     &-box:hover &,
     &-box:focus & {
-      transform: translateY(-294px);
+      transform: translateY(-100%);
     }
   }
 
